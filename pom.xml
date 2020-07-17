@@ -67,7 +67,7 @@
         <cobertura.maven.plugin>2.6</cobertura.maven.plugin>
         <coveralls.maven.plugin>3.2.1</coveralls.maven.plugin>
         <hessian.version>3.3.6</hessian.version>
-        <java.version>1.6</java.version>
+        <java.version>1.8</java.version>
         <license.maven.plugin>3.0</license.maven.plugin>
         <maven.assembly.plugin>3.0.0</maven.assembly.plugin>
         <maven.compiler.plugin>3.5.1</maven.compiler.plugin>
