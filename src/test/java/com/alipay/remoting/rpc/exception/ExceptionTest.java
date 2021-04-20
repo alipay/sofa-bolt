@@ -78,14 +78,15 @@ public class ExceptionTest {
         }
     }
 
+    
+    @Rule
+    public ExpectedException thrown = ExpectedException.none();
+    
     @Test
     public void testSyncNoProcessor() {
         server.registerUserProcessor(new SimpleServerUserProcessor());
-        try {
-            client.invokeSync(addr, "No processor for String now!", 3000);
-        } catch (Exception e) {
-            Assert.assertEquals(InvokeServerException.class, e.getClass());
-        }
+        thrown.expect(InvokeServerException.class);        
+        client.invokeSync(addr, "No processor for String now!", 3000);
     }
 
     @Test
